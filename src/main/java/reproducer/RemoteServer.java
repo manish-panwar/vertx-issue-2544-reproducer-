@@ -24,8 +24,7 @@ public class RemoteServer {
 
     @PostConstruct
     public void init() throws Exception {
-        contextRunner.executeBlocking(1,
-                () -> createHttpListener().buffer(2), 1, MINUTES);
+        contextRunner.executeBlocking(1, () -> createHttpListener().buffer(2), 1, MINUTES);
     }
 
     private Observable<HttpServer> createHttpListener() {

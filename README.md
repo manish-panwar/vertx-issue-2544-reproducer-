@@ -2,16 +2,16 @@ This is a sample reproducer for issue where Vertx WebClient is encoding query pa
 
 e.g. If we are requesting remote server at following path :
 
-        /remote-server-ath?jREJBBB5x2AaiSSDO0/OskoCztDZBAAAAAADV1A4
+        /remote-server?jREJBBB5x2AaiSSDO0/OskoCztDZBAAAAAADV1A4
         
 
 If using HttpClient then remote server is receiving following:
 
-        /remote-server-ath?jREJBBB5x2AaiSSDO0/OskoCztDZBAAAAAADV1A4
+        jREJBBB5x2AaiSSDO0/OskoCztDZBAAAAAADV1A4
 
 If using WebClient then remote server is receiving following:
 
-        /remote-server-ath?jREJBBB5x2AaiSSDO0%2FOskoCztDZBAAAAAADV1A4=
+        jREJBBB5x2AaiSSDO0%2FOskoCztDZBAAAAAADV1A4=
         
         
 To see the issue, just run AppStarter. It will start a sample remote server, and a client impl which will use HttpClient and WebClient to make remote call. Wait 5 seconds after starting AppStarter and look at console logs.
