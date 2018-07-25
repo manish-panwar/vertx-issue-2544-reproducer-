@@ -14,6 +14,6 @@ If using WebClient then remote server is receiving following:
         jREJBBB5x2AaiSSDO0%2FOskoCztDZBAAAAAADV1A4=
         
         
-To see the issue, just run AppStarter. It will start a sample remote server, and a client impl which will use HttpClient and WebClient to make remote call. Wait 5 seconds after starting AppStarter and look at console logs.
+To see the issue, just run AppStarter from your IDE. It will start a sample remote server, and a client impl which will use HttpClient and WebClient to make remote call. Wait 5 seconds after starting AppStarter and look at console logs.
 
 This sample code is just for demo purpose, and not Prod style/ready code.
